@@ -5,6 +5,7 @@
 	<title>Keith Kovach</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<link rel="stylesheet" href="../../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 	<div>
@@ -19,16 +20,23 @@
 	</div>
 	<div class="nav">
         <ul id="buttonDiv">
-            <li class="navButton"><a href="/" class="navLink">Home</a></li>
-            <li class="navButton"><a href="/About" class="navLink">About Me</a></li>
-            <li class="navButton"><a href="/Projects" class="navLink">Projects</a></li>
-            <li class="navButton"><a href="/Contact" class="navLink">Contact</a></li>        
+            <li class="navButton"><a href="" class="navLink">Home</a></li>
+            <li class="navButton"><a href="#aboutMe" class="navLink">About Me</a></li>
+            <li class="navButton"><a href="#projects" class="navLink">Projects</a></li>
+            <li class="navButton"><a href="#contact" class="navLink">Contact</a></li>        
         </ul>						
 	</div>
 	<div>
-		<div class="aboutMe">
+		<div id="aboutMe">
 			<h3>About Me</h3>
 		</div>
+		<div id="projects">
+			<h3>Projects</h3>
+		</div>
+		<div id="contact">
+			<h3>Contact</h3>
+		</div>
 	</div>
+	<script src="../../js/script.js"></script>
 </body>
 </html>

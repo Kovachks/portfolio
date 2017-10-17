@@ -22,3 +22,13 @@ $(document).ready(function(){
       } // End if
     });
   });
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 506) {
+        console.log("Nav should be set to fixed")
+    $(".nav").addClass("navFixed")
+    }
+    else {
+        $(".nav").removeClass("navFixed")
+    }
+})

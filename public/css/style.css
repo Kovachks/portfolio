@@ -51,6 +51,14 @@
     width: 100%;
     background-color: grey;
 }
+.navFixed {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 55px;
+    width: 100%;
+    background-color: grey;
+}
 .navLink {
 	display: inline-block;
 	margin:0;

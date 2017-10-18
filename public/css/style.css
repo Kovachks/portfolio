@@ -1,3 +1,7 @@
+/* body {
+    background-image: url("../../images/background_Grain.jpg");
+    background-size: cover;    
+} */
 .profilePicMin {
     height: 55px;
     opacity: 0;
@@ -120,19 +124,23 @@
 	display: inline-block;
 	text-decoration: none;
 }
+.sectionHeader {
+    margin: 80px 25% 0 25%;
+    width: 50%;
+    font-size: 35px;
+}
 .aboutMe {
-    margin: 80px 25%;
+    margin: 0 25%;
     width: 50%;
     font-size: 35px;
     height: 750px;
-    border: 2px black solid
+    border: 2px black solid;
+    background-color: #f5f5f5;
 }
 .aboutMeMargin {
-    margin: 190px 25% 80px 25%;
+    margin: 190px 25% 0 25%;
     width: 50%;
     font-size: 35px;
-    height: 750px;
-    border: 2px black solid
 }
 #projects {
     margin: 80px 25%;

@@ -24,11 +24,19 @@ $(document).ready(function(){
   });
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= 506) {
+    if (scroll >= 451) {
         console.log("Nav should be set to fixed")
-    $(".nav").addClass("navFixed")
+    $(".nav").addClass('navFixed');
+    $(".bottomBorderHidden").addClass("bottomBorderFixed")
+    $(".profilePicMin").switchClass("profilePicMin", "profilePicMinShown", 1000)
+    $(".nameFixedMin").switchClass("nameFixedMin", "nameFixedMinShown", 1000)    
+    $(".aboutMe").addClass("aboutMeMargin")
     }
     else {
         $(".nav").removeClass("navFixed")
+        $(".bottomBorderHidden").removeClass("bottomBorderFixed")
+        $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
+        $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
+        $(".aboutMe").removeClass("aboutMeMargin")
     }
 })

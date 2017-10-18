@@ -5,7 +5,12 @@
 	<title>Keith Kovach</title>
 	<link rel="stylesheet" href="../../css/reset.css">
 	<link rel="stylesheet" href="../../css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script
+  		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  		crossorigin="anonymous">
+  	</script>
 </head>
 <body>
 	<div>
@@ -14,9 +19,13 @@
 		</div>
 		<div class="border"></div>
 		<div class="bottomBorder">
-			<img src="../../images/profile.jpg" alt="" class="profilePic2">
+			<img src="../../images/profile.jpg" alt="" class="profilePicMax">
 			<h3 class="jobTitle">Full Stack Web Developer</h3>
 		</div>
+	</div>
+	<div class="bottomBorderHidden">
+		<img src="../../images/profile.jpg" alt="" class="profilePicMin">
+		<h3 class="nameFixedMin">Keith Kovach</h3>
 	</div>
 	<div class="nav">
         <ul id="buttonDiv">
@@ -27,7 +36,7 @@
         </ul>						
 	</div>
 	<div>
-		<div id="aboutMe">
+		<div id="aboutMe" class="aboutMe">
 			<h3>About Me</h3>
 		</div>
 		<div id="projects">
@@ -40,3 +49,4 @@
 	<script src="../../js/script.js"></script>
 </body>
 </html>
+

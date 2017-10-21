@@ -141,10 +141,10 @@
     font-size: 35px;
 }
 .projectLink {
-    display: inline-block;
     position: relative;
-    width: 250px;
-    margin: 25px auto 0 auto;
+    float: left;
+    margin: 20px;
+    background-color: grey;
 }
 .projectImage {
     width: 250px;

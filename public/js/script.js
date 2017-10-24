@@ -20,6 +20,23 @@ $(document).ready(function(){
     });
   });
 
+$(document).ready(function() {
+  var from,to,subject,text;
+  $("#send_email").click(function() {
+    console.log("E-mail is working")
+    from=$("#from").val();
+    subject=$("#subject").val();
+    text=$("#content").val();
+    console.log("to: " + from + "; subject: " + subject + "; text" + text)
+    $.get("/send", {from:from,subject:subject,text:text}, function(data) {
+      if(data=="sent")
+    {
+      $("#message").empty().html("Email has been sent")
+    }
+  })
+  })
+})
+
 //Functiion for scrolling and fixing the navbar and animation for the header
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();

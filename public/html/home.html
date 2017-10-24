@@ -60,16 +60,10 @@
 		<div>
 			<h3 id="contact" class="sectionHeader">Contact</h3>
 			<div class="aboutMe" id="contactSection">
-				<form action="mailto:someone@example.com" method="post" enctype="text/plain">
-					Name:<br>
-					<input type="text" name="name"><br>
-					E-mail:<br>
-					<input type="text" name="mail"><br>
-					Comment:<br>
-					<input type="text" name="comment" size="50"><br><br>
-					<input type="submit" value="Send">
-					<input type="reset" value="Reset">
-					</form>
+				<input id="from" type="text" placeholder="Enter Your Email" />
+				<input id="subject" type="text" placeholder="Write Subject" />
+				<textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"></textarea>
+				<button id="send_email">Send Email</button>
 			</div>
 		</div>
 	</div>

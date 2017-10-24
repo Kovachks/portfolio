@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var config = require("./config.js")
 var $ = require('jquery');
 var nodemailer = require('nodemailer');
 
@@ -21,8 +22,8 @@ var smtpTransport = nodemailer.createTransport({
     secure: false,
     port: 25,
     auth: {
-        user: "KeithKovachPortfolio@gmail.com",
-        pass: "Kihkvc90!"
+        user: "KeithKovachPortfolio@gmail.com", //Your email here.  I created email specifically for site
+        pass: config.password
     },
     tls: {
         rejectUnauthorized: false

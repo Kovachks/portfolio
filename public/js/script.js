@@ -1,16 +1,24 @@
+//------------Variables------------
+
+//Creating variables to store email data
+var from,to,subject,text;
+
+//Function for smooth scrolling functions
 $(document).ready(function(){
+
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
   
       // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
+
         // Prevent default anchor click behavior
-        event.preventDefault();
+		event.preventDefault();
+		
         // Store hash
         var hash = this.hash;
   
         // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top -125
         }, 800, function(){
@@ -20,22 +28,25 @@ $(document).ready(function(){
     });
   });
 
-$(document).ready(function() {
-  var from,to,subject,text;
-  $("#send_email").click(function() {
-    console.log("E-mail is working")
-    from=$("#from").val();
-    subject=$("#subject").val();
-    text=$("#content").val();
-    console.log("to: " + from + "; subject: " + subject + "; text" + text)
-    $.get("/send", {from:from,subject:subject,text:text}, function(data) {
-      if(data=="sent")
-    {
-      $("#message").empty().html("Email has been sent")
-    }
-  })
-  })
-})
+//add click listener
+$("#send_email").click(function() {
+	
+	//Populating variables from user input
+	from=$("#from").val();
+	subject=$("#subject").val();
+	text=$("#content").val();
+	$("#from").val("");
+	$("#subject").val("");
+	$("#content").val("");
+	
+	//
+	$.get("/send", {from:from,subject:subject,text:text}, function(data) {
+		if(data=="sent")
+	{
+		$('#myModal').modal(options)
+	}
+	})
+});
 
 //Functiion for scrolling and fixing the navbar and animation for the header
 $(window).scroll(function() {

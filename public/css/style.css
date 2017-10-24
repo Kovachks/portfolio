@@ -173,4 +173,16 @@
 }
 #contactSection {
     margin-bottom: 35px;
+    text-align: center;
+    height: 650px;
+}
+#aboutMePic {
+    float: left;
+    height: 250px;
+    margin: 25px 25px 10px 25px;
+    width: 200px;
+}
+.aboutMeText {
+    margin: 25px;
+    font-size: 20px;
 }

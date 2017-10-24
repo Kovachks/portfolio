@@ -37,7 +37,16 @@
 	<div class="mainBody">
 		<div>
 			<h3 id="aboutMe" class="sectionHeader">About Me</h3>
-			<div class="aboutMe"></div>
+			<div class="aboutMe">
+				<img src="../../images/about_me.jpg" alt="Picture of Keith Kovach" id="aboutMePic">
+				<p class="aboutMeText">My name is Keith Kovach and I am a full stack web developer.  I was born and raised in Cleveland, OH and graduated from the University of Cincinnati in 2013 with a bachelors degree in Accounting.  After graduation I decided to move to Charlotte, NC in order to work as an accountant for the next 3 years.</p>
+
+				<p class="aboutMeText">While I did not go to school to learn computer programming I have always been extremely interested in computers.  I build my own personal computers, enjoy reading about tech news, and learning about the latest technologies.  I quit my role as an accountant to enroll in the UNC-C Coding Bootcamp which I graduated from in October 2017 in order to pursue my dream of becoming a web developer.</p>
+
+				<p class="aboutMeText">
+					As part of the coding bootcamp we were able to work with many different languages and technologies.  We started out at the basics of HTML/CSS and worked our way up through React.js and C#.  
+				</p>
+			</div>
 		</div>
 		<div>
 			<h3 id="projects" class="sectionHeader">Projects</h3>
@@ -59,9 +68,18 @@
 		<div>
 			<h3 id="contact" class="sectionHeader">Contact</h3>
 			<div class="aboutMe" id="contactSection">
-				<input id="from" type="text" placeholder="Enter Your Email" />
-				<input id="subject" type="text" placeholder="Write Subject" />
-				<textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"></textarea>
+				<div>
+					<p>Contact Email Address</p>
+					<input id="from" type="text" placeholder="Enter Your Email" />
+				</div>
+				<div>
+					<p>Subject</p>
+					<input id="subject" type="text" placeholder="Write Subject" />
+				</div>
+				<div>
+					<p>Message</p>
+					<textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"></textarea>
+				</div>
 				<button id="send_email">Send Email</button>
 			</div>
 		</div>

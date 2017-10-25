@@ -20,7 +20,7 @@ $(document).ready(function(){
   
         // Using jQuery's animate() method to add smooth page scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -205
+          scrollTop: $(hash).offset().top -50
         }, 800, function(){
      
         });

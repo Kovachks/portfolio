@@ -37,8 +37,8 @@ app.get("/", function(req, res) {
 app.get('/send',function(req,res){
     var mailOptions={
         to : "kovachks90@gmail.com",
-        subject : req.query.subject,
-        text : "Entered Email: " + req.query.from + "  Email Text: " + req.query.text
+        subject : "Message From Portfolio",
+        text : "Entered Email: " + req.query.from + "  Entered Name: " + req.query.name + "  Email Text: " + req.query.text
     }
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){

@@ -39,7 +39,7 @@
 			<h3 id="aboutMe" class="sectionHeader">About Me</h3>
 			<div class="aboutMe">
 				<img src="../../images/about_me.jpg" alt="Picture of Keith Kovach" id="aboutMePic">
-				<p class="aboutMeText">My name is Keith Kovach and I am a full stack web developer.  I was born and raised in Cleveland, OH and graduated from the University of Cincinnati in 2013 with a bachelors degree in Accounting.  After graduation I decided to move to Charlotte, NC in order to work as an accountant for the next 3 years.</p>
+				<p class="aboutMeText">Extremely passionate and motivated Full Stack Web Developer who is always learning new technologies and continuing to master old ones.</p>
 
 				<p class="aboutMeText">While I did not go to school to learn computer programming I have always been extremely interested in computers.  I build my own personal computers, enjoy reading about tech news, and learning about the latest technologies.  I quit my role as an accountant to enroll in the UNC-C Coding Bootcamp which I graduated from in October 2017 in order to pursue my dream of becoming a web developer.</p>
 
@@ -48,7 +48,7 @@
 				</p>
 			</div>
 		</div>
-		<div>
+		<div class="projectDiv">
 			<h3 id="projects" class="sectionHeader">Projects</h3>
 			<div class="projectDiv">
 				<a href="http://google.com" class="projectLink" target="_blank">
@@ -67,21 +67,31 @@
 		</div>
 		<div>
 			<h3 id="contact" class="sectionHeader">Contact</h3>
-			<div class="aboutMe" id="contactSection">
+			<div>
 				<div>
-					<p>Contact Email Address</p>
-					<input id="from" type="text" placeholder="Enter Your Email" />
+					<input id="from" class="contactSmall" type="text" placeholder="Email*" />
+				</div>
+				<div>	
+					<input id="name" class="contactSmall" type="text" placeholder="Name" />
 				</div>
 				<div>
-					<p>Subject</p>
-					<input id="subject" type="text" placeholder="Write Subject" />
-				</div>
-				<div>
-					<p>Message</p>
-					<textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"></textarea>
+					<textarea id="content" class="contactSmall" cols="40" rows="5" placeholder="Message"></textarea>
 				</div>
 				<button id="send_email">Send Email</button>
 			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="leftFooter">
+			<p class="copyrightText">Copyright 2017 Keith Kovach</p>
+		</div>
+		<div class="rightFooter">
+			<a href="https://www.linkedin.com/in/keith-kovach-18687583/" class="projectLink" target="_blank">
+				<img src="../../images/linkedInBlack.png" alt="" class="thumbnail">
+			</a>
+			<a href="https://github.com/Kovachks" class="projectLink" target="_blank">
+				<img src="../../images/githubBlack.png" alt="" class="thumbnail">
+			</a>
 		</div>
 	</div>
 	<script src="../../js/script.js"></script>

@@ -20,7 +20,7 @@ $(document).ready(function(){
   
         // Using jQuery's animate() method to add smooth page scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -125
+          scrollTop: $(hash).offset().top -205
         }, 800, function(){
      
         });
@@ -33,19 +33,25 @@ $("#send_email").click(function() {
 	
 	//Populating variables from user input
 	from=$("#from").val();
-	subject=$("#subject").val();
+	name=$("#name").val();
 	text=$("#content").val();
+
+	//Clearing entered values after submission
 	$("#from").val("");
-	$("#subject").val("");
+	$("#name").val("");
 	$("#content").val("");
 	
-	//
-	$.get("/send", {from:from,subject:subject,text:text}, function(data) {
-		if(data=="sent")
-	{
-		$('#myModal').modal(options)
+	if (from  !== "") {
+		$.get("/send", {from:from,name:name,text:text}, function(data) {
+			if(data=="sent")
+			{
+				//Triggering model after successful submission
+				alert("Message has been sent.  I will respond as soon as possible!")
+			}
+		})
+	} else {
+		alert("Email is required to send message.  Thanks!")
 	}
-	})
 });
 
 //Functiion for scrolling and fixing the navbar and animation for the header

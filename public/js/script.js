@@ -42,7 +42,7 @@ function resizeDiv() {
 	$("#headerSection").css({'height': vph + 'px'})
 	$("#nav").css({'height': vph * .05 + 'px'})
 	$("#navFixed").css({'height': vph * .05 + 'px'})
-	$("#name").css({'top': vph * })
+	// $("#name").css({'top': vph * })
 	console.log(vph* .05)
 }
 

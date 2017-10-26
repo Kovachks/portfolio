@@ -28,6 +28,23 @@ $(document).ready(function(){
     });
   });
 
+$(document).ready(function() {
+	resizeDiv();
+})
+
+window.onresize = function() {
+	resizeDiv();
+};
+
+function resizeDiv() {
+	vpw = $(window).width();
+	vph = $(window).height();
+	$("#headerSection").css({'height': vph + 'px'})
+	$("#nav").css({'height': vph * .05 + 'px'})
+	$("#navFixed").css({'height': vph * .05 + 'px'})
+	console.log(vph* .05)
+}
+
 //add click listener
 $("#send_email").click(function() {
 	
@@ -59,7 +76,7 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     //if user scrolls to the top of the hidden portion of the fixed elements
-    if (scroll >= 451) {
+    if (scroll >= ($(window).height()*.95)) {
 
     //then fix the navbar
     $(".nav").addClass('navFixed');

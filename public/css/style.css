@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 .nameHeader {
-    height: 250px;
+    height: 49.75%;
     background-color: #286da8;
 }
 .nameHeaderMin {
@@ -33,7 +33,6 @@
     width: 100%;
 }
 .bottomBorderHidden {
-    height: 55px;
     background-color: #cd5360;
     margin: 0;
 }
@@ -44,7 +43,7 @@
     z-index: 1;
 }
 .bottomBorder {
-    height: 196px;
+    height: 44.75%;
     background-color: #cd5360;
 }
 .bottomBorderMin {
@@ -57,8 +56,9 @@
     z-index: -1;
 }
 .name {
-    position: relative;
-    top: 60px;
+    display: block;
+    margin: auto;
+    vertical-align: center;
     text-align: center;
     font-size: 40px;
     color: #f5f5f5;
@@ -87,11 +87,10 @@
     color: #f5f5f5;
 }
 .border {
-    height: 3px;
+    height: .5%;
     background-color: #f5f5f5;
 }
 .nav {
-    height: 55px;
     width: 100%;
     background-color: grey;
 }
@@ -99,7 +98,6 @@
     position: fixed;
     top: 55px;
     margin: 0;
-    height: 55px;
     width: 100%;
     background-color: grey;
     z-index: 1;

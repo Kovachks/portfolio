@@ -179,11 +179,6 @@ mainBody {
     padding: 15px 0 0 0;
     margin: 2px; */
 }
-#contactSection {
-    margin-bottom: 35px;
-    text-align: center;
-    height: 650px;
-}
 #aboutMePic {
     float: left;
     height: 250px;
@@ -211,19 +206,25 @@ mainBody {
 #contact {
     text-align: center;
 }
+.contactSection {
+    display: block;
+    margin: 50px auto;
+}
 .footer {
     border-top: 10px solid #cd5360;
-    height: 150px;
+    height: 154px;
     width: 100%;
     background-color: grey;
     color: white;
 }
 .copyrightText {
+    width: 50%;
     margin: 0;
 }
 .thumbnail {
     height: 45px;
     width: 45px;
+    margin: 2px
 }
 .leftFooter {
     float: left;

@@ -220,9 +220,10 @@ mainBody {
 }
 .copyrightText {
     display: block;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     font-size: 18px;
+    text-align: center;
 }
 .contactSection {
     width: 100%;
@@ -235,27 +236,28 @@ mainBody {
     margin: 2px
 }
 .leftFooter {
+    height: 154px;
     float: left;
     width: 33%
 }
 .rightFooter {
     float: right;
     width: 33%;
-    height: 150px;
+    height: 154px;
 }
 .middleFooter {
     float: left;
     width: 33%;
-    height: 150px;
+    height: 154px;
 }
 .projectDiv {
     margin-bottom: 100px;
 }
 .logoDiv {
     display: block;
-    margin:0 auto;
-    width: 52px;
-    height: 154px;
+    margin:50px auto 0 auto;
+    width: 160px;
+    height: 100px;
 }
 .logo {
     display: block;

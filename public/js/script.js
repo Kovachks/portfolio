@@ -3,6 +3,9 @@
 //Creating variables to store email data
 var from,to,subject,text;
 
+//Creating variable to measure the window height
+winHeight = $(window).height();
+console.log(winHeight)
 //Function for smooth scrolling functions
 $(document).ready(function(){
 
@@ -28,22 +31,23 @@ $(document).ready(function(){
     });
   });
 
+//Runs resizeDiv function on page load
 $(document).ready(function() {
 	resizeDiv();
 })
 
+//Runs resizeDiv function on window resize
 window.onresize = function() {
 	resizeDiv();
 };
 
 function resizeDiv() {
-	vpw = $(window).width();
-	vph = $(window).height();
+  vpw = $(window).width();
+  vph = $(window).height();
+  console.log(vpw)
 	$("#headerSection").css({'height': vph + 'px'})
 	$("#nav").css({'height': vph * .05 + 'px'})
   $("#navFixed").css({'height': vph * .05 + 'px'})
-	// $("#name").css({'top': vph * })
-	console.log(vph* .05)
 }
 
 //add click listener
@@ -102,6 +106,14 @@ $(window).scroll(function() {
         $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
         $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
         // $("#aboutMe").removeClass("aboutMeMargin")
-        $("#aboutMe").css({'margin-top': (vph * .1 + 130) + 'px'})
+        $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
     };
 });
+
+//Beginning of function to decorate nav links based on current element selection
+$(window).scroll(function() {
+  if ($("#aboutMe").scrollTop()) {
+    $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
+  }
+
+})

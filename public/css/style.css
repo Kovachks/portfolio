@@ -38,6 +38,7 @@ mainBody {
 .bottomBorderHidden {
     background-color: #cd5360;
     margin: 0;
+    width: 100%;
 }
 .bottomBorderFixed {
     position:fixed;
@@ -110,19 +111,38 @@ mainBody {
 	display: inline-block;
 	margin:0;
 	text-decoration: none;
-	height: 50px;
+	height: 54px;
 	width: 125px;
 	color: #f5f5f5;
-	font-size: 1.25em;
+    font-size: 1.25em;
+}
+.navLinkSelected {
+	display: inline-block;
+	margin:0;
+	text-decoration: none;
+	height: 54px;
+	width: 125px;
+	color: #f5f5f5;
+    font-size: 1.25em;
+    text-decoration: underline;
 }
 .navButton {
 	display: inline-block;	
 	line-height: 50px;
-	height: 50px;
+	height: 54px;
 	width: 125px;	
 	text-align: center;
 	display: inline-block;
-	text-decoration: none;
+    text-decoration: none;
+    border: 2px solid grey;
+    -webkit-transition: border .2s; /* Safari */
+    transition: border .2s;    
+}
+.navButton:hover {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid white;
 }
 .headerSection {
     width: 100%;
@@ -154,8 +174,10 @@ mainBody {
     background-color: grey;
 }
 .thumbnailLink {
+    height: 45px;
+    width: 45px;
     float: left;
-    margin: 0;
+    margin: 0 2px;
     background-color: grey;
 }
 .projectImage {
@@ -169,20 +191,6 @@ mainBody {
     width: 1000px;
     overflow: hidden;
     border: 2px solid black;
-}
-.projectName {
-    /* position: absolute;
-    top: 180px;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    align-content: center;
-    background-color: black;
-    height: 35px;
-    text-decoration: none;
-    color: white;
-    padding: 15px 0 0 0;
-    margin: 2px; */
 }
 #aboutMePic {
     float: left;
@@ -201,6 +209,8 @@ mainBody {
     height: 25px;
 }
 #content {
+    font-size: 13.3333px;
+    font-family: Arial;
     height: 150px;
 }
 #send_email {
@@ -256,7 +266,7 @@ mainBody {
 .logoDiv {
     display: block;
     margin:50px auto 0 auto;
-    width: 160px;
+    width: 200px;
     height: 100px;
 }
 .logo {
@@ -264,4 +274,9 @@ mainBody {
     height: 125px;
     width: 125px;
     margin: 12px auto;
+}
+@media only screen and (max-width: 980px) {
+    .copyrightText {
+        font-size: 14px;
+    }
 }

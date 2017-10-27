@@ -11,6 +11,9 @@
     opacity: 1;
 
 }
+mainBody {
+    position: relative;
+}
 .profilePicMax {
     position: relative;
     top: -130px;
@@ -121,6 +124,9 @@
 	display: inline-block;
 	text-decoration: none;
 }
+.headerSection {
+    width: 100%;
+}
 .sectionHeader {
     margin: 80px 25% 0 25%;
     width: 50%;
@@ -144,7 +150,7 @@
 }
 .projectLink {
     float: left;
-    margin: 39px;
+    margin: 0 39px;
     background-color: grey;
 }
 .projectImage {
@@ -193,7 +199,6 @@
     margin: 10px auto;
     width: 600px;
     height: 25px;
-
 }
 #content {
     height: 150px;
@@ -209,6 +214,7 @@
 .footer {
     border-top: 10px solid #cd5360;
     height: 150px;
+    width: 100%;
     background-color: grey;
     color: white;
 }
@@ -216,8 +222,8 @@
     margin: 0;
 }
 .thumbnail {
-    height: 65px;
-    width: 65px;
+    height: 45px;
+    width: 45px;
 }
 .leftFooter {
     float: left;
@@ -225,8 +231,12 @@
 }
 .rightFooter {
     float: right;
-    width: 50%
+    width: 50%;
+    height: 150px;
 }
 .projectDiv {
     margin-bottom: 100px;
+}
+.logoDiv {
+    width: 75px;
 }

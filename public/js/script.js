@@ -20,7 +20,7 @@ $(document).ready(function(){
   
         // Using jQuery's animate() method to add smooth page scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -50
+          scrollTop: $(hash).offset().top -55
         }, 800, function(){
      
         });
@@ -41,7 +41,7 @@ function resizeDiv() {
 	vph = $(window).height();
 	$("#headerSection").css({'height': vph + 'px'})
 	$("#nav").css({'height': vph * .05 + 'px'})
-	$("#navFixed").css({'height': vph * .05 + 'px'})
+  $("#navFixed").css({'height': vph * .05 + 'px'})
 	// $("#name").css({'top': vph * })
 	console.log(vph* .05)
 }
@@ -101,6 +101,7 @@ $(window).scroll(function() {
         $(".bottomBorderHidden").removeClass("bottomBorderFixed")
         $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
         $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
-        $("#aboutMe").removeClass("aboutMeMargin")
+        // $("#aboutMe").removeClass("aboutMeMargin")
+        $("#aboutMe").css({'margin-top': (vph * .1 + 130) + 'px'})
     };
 });

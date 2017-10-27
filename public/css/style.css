@@ -153,6 +153,11 @@ mainBody {
     margin: 0 39px;
     background-color: grey;
 }
+.thumbnailLink {
+    float: left;
+    margin: 0;
+    background-color: grey;
+}
 .projectImage {
     width: 250px;
     height: 250px;
@@ -206,10 +211,6 @@ mainBody {
 #contact {
     text-align: center;
 }
-.contactSection {
-    display: block;
-    margin: 50px auto;
-}
 .footer {
     border-top: 10px solid #cd5360;
     height: 154px;
@@ -218,8 +219,15 @@ mainBody {
     color: white;
 }
 .copyrightText {
+    display: block;
     width: 50%;
-    margin: 0;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.contactSection {
+    width: 100%;
+    margin-top: 55px;
+    display: block;
 }
 .thumbnail {
     height: 45px;
@@ -228,16 +236,30 @@ mainBody {
 }
 .leftFooter {
     float: left;
-    width: 50%
+    width: 33%
 }
 .rightFooter {
     float: right;
-    width: 50%;
+    width: 33%;
+    height: 150px;
+}
+.middleFooter {
+    float: left;
+    width: 33%;
     height: 150px;
 }
 .projectDiv {
     margin-bottom: 100px;
 }
 .logoDiv {
-    width: 75px;
+    display: block;
+    margin:0 auto;
+    width: 52px;
+    height: 154px;
+}
+.logo {
+    display: block;
+    height: 125px;
+    width: 125px;
+    margin: 12px auto;
 }

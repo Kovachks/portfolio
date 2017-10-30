@@ -294,3 +294,9 @@ mainBody {
     }
 
 }
+@media only screen and (max-width: 500px) and (min-width: 300px) {
+    .profilePicMax {
+        height: 500px;
+        width: 500px;
+    }
+}

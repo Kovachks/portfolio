@@ -109,15 +109,43 @@ $(window).scroll(function() {
         $(".bottomBorderHidden").removeClass("bottomBorderFixed")
         $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
         $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
-        // $("#aboutMe").removeClass("aboutMeMargin")
         $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
     };
 });
 
 //Beginning of function to decorate nav links based on current element selection
 $(window).scroll(function() {
-  if ($("#aboutMe").scrollTop()) {
-    $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
-  }
 
+  //Storing variable for current scroll position
+  var currentWindow = $(window).scrollTop()
+
+  //Beginning of if statement.  If current scroll position + 80px padding is greater than selected element
+  //then the switch class will fire and nav links will be styled differently.
+  if ((currentWindow + 80) > $("#contact").offset().top) {
+    $("#contactLink").switchClass("navLink", "navLinkSelected")
+    $("#projectsLink").switchClass("navLinkSelected", "navLink")
+    $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
+    $("#homeLink").switchClass("navLinkSelected", "navLink")
+  }
+  
+  else if ((currentWindow + 80) > $("#projects").offset().top) {
+      $("#projectsLink").switchClass("navLink","navLinkSelected")
+      $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
+      $("#contactLink").switchClass("navLinkSelected", "navLink")
+      $("#homeLink").switchClass("navLinkSelected", "navLink")    
+  }
+  
+  else if ((currentWindow + 80) > $("#aboutMe").offset().top) {
+    $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
+    $("#projectsLink").switchClass("navLinkSelected", "navLink")
+    $("#contactLink").switchClass("navLinkSelected", "navLink")
+    $("#homeLink").switchClass("navLinkSelected", "navLink")    
+  }
+  
+  else if (currentWindow < $("#aboutMe").offset().top) {
+    $("#homeLink").switchClass("navLink", "navLinkSelected")
+    $("#projectsLink").switchClass("navLinkSelected", "navLink")
+    $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
+    $("#contactLink").switchClass("navLinkSelected", "navLink")    
+  }
 })

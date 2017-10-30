@@ -286,24 +286,17 @@ mainBody {
     .projectLink {
         margin: 10px 60px;
     }
-    .profilePicMax {
-        height: 500px;
-        width: 500px;   
-    }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 500px) {
     .projectDiv {
         width: 485px;
     }
-    .profilePicMax {
-        height: 500px;
-        width: 500px;   
-    }
 }
-@media only screen and (max-width: 500px) and (min-width: 300px) {
+@media only screen and (max-width: 577px) and (min-width: 300px) {
     .profilePicMax {
         height: 500px;
-        width: 500px;   
+        width: 500px;
+        top: -260px;   
     }
 }

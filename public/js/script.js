@@ -5,7 +5,11 @@ var from,to,subject,text;
 
 //Creating variable to measure the window height
 winHeight = $(window).height();
-console.log(winHeight)
+
+
+//-------------Functions-----------
+
+
 //Function for smooth scrolling functions
 $(document).ready(function(){
 
@@ -16,7 +20,7 @@ $(document).ready(function(){
       if (this.hash !== "") {
 
         // Prevent default anchor click behavior
-		event.preventDefault();
+		    event.preventDefault();
 		
         // Store hash
         var hash = this.hash;

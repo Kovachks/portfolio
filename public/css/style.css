@@ -133,16 +133,17 @@ mainBody {
 	width: 125px;	
 	text-align: center;
 	display: inline-block;
-    text-decoration: none;
-    border: 2px solid grey;
-    -webkit-transition: border .2s; /* Safari */
-    transition: border .2s;    
+    text-decoration: none;    
 }
 .navButton:hover {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border: 2px solid white;
+    display: inline-block;	
+	line-height: 50px;
+	height: 54px;
+	width: 125px;	
+	text-align: center;
+	display: inline-block;
+    text-decoration: none;    
+    background-color: #6a6a6b;
 }
 .headerSection {
     width: 100%;

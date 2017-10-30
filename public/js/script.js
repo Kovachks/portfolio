@@ -4,7 +4,7 @@
 var from,to,subject,text;
 
 //Creating variable to measure the window height
-winHeight = $(window).height();
+var winHeight = $(window).height();
 
 
 //-------------Functions-----------
@@ -29,9 +29,8 @@ $(document).ready(function(){
         $('html, body').animate({
           scrollTop: $(hash).offset().top -55
         }, 800, function(){
-     
         });
-      }; // End if
+      };
     });
   });
 
@@ -48,7 +47,6 @@ window.onresize = function() {
 function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
-  console.log(vpw)
 	$("#headerSection").css({'height': vph + 'px'})
 	$("#nav").css({'height': vph * .05 + 'px'})
   $("#navFixed").css({'height': vph * .05 + 'px'})

@@ -317,13 +317,43 @@ mainBody {
     }
     .contactSmall {
         height: 50px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        width: 85%;
+        margin: 15px 7.5%;
         border: 3px solid black;
         font-size: 30px;
     }
     #content {
         height: 250px;
         font-size: 40px;
+        width: 85%;
+        margin: 15px 7.5%;
+        border: 3px solid black;
+    }
+    #contact {
+        font-size: 100px;
+    }
+    #send_email {
+        height: 100px;
+        width: 200px;
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .footer {
+        height: 450px;
+    }
+    .leftFooter {
+        width: 100%;
+        margin: 0
+    }
+    .middleFooter {
+        width: 100%;
+        margin: 0        
+    }
+    .rightFooter {
+        width: 100%;
+        margin: 0
+    }
+    .copyrightText {
+        font-size: 30px;
     }
 }

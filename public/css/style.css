@@ -298,14 +298,32 @@ mainBody {
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .profilePicMax {
-        height: 400px;
-        width: 400px;
-        top: -208px;   
+        height: 600px;
+        width: 600px;
+        top: -312px;
+        border-radius: 600px;       
+    }
+    .name {
+        font-size: 80px;
+    }
+    .jobTitle {
+        font-size: 80px;
     }
     .projectDiv {
         width: 485px;
     }
     .projectLink {
         margin: 15px 115px
+    }
+    .contactSmall {
+        height: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: 3px solid black;
+        font-size: 30px;
+    }
+    #content {
+        height: 250px;
+        font-size: 40px;
     }
 }

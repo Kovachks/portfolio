@@ -296,7 +296,7 @@ mainBody {
         margin: 15px 115px
     }
 }
-@media only screen and (max-width: 640px) and (min-width: 320px) and (-webkit-device-pixel-ratio: 4) {
+@media only screen and (max-width: 320px) {
     .profilePicMax {
         height: 400px;
         width: 400px;

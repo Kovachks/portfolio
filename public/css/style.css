@@ -171,7 +171,7 @@ mainBody {
 }
 .projectLink {
     float: left;
-    margin: 0 39px;
+    margin: 15px 39px;
     background-color: grey;
 }
 .thumbnailLink {
@@ -292,11 +292,20 @@ mainBody {
     .projectDiv {
         width: 485px;
     }
+    .projectLink {
+        margin: 15px 115px
+    }
 }
 @media only screen and (max-width: 600px) and (min-width: 300px) {
     .profilePicMax {
-        height: 500px;
-        width: 500px;
-        top: -260px;   
+        height: 400px;
+        width: 400px;
+        top: -208px;   
+    }
+    .projectDiv {
+        width: 485px;
+    }
+    .projectLink {
+        margin: 15px 115px
     }
 }

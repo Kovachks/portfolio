@@ -119,7 +119,7 @@ $(window).scroll(function() {
 
   //Beginning of if statement.  If current scroll position + 80px padding is greater than selected element
   //then the switch class will fire and nav links will be styled differently.
-  if ((currentWindow + 80) > $("#contact").offset().top) {
+  if ((currentWindow + 160) > $("#contact").offset().top) {
     $("#contactLink").switchClass("navLink", "navLinkSelected")
     $("#projectsLink").switchClass("navLinkSelected", "navLink")
     $("#aboutMeLink").switchClass("navLinkSelected", "navLink")

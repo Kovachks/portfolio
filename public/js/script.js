@@ -36,20 +36,20 @@ $(document).ready(function(){
 
 //Runs resizeDiv function on page load
 $(document).ready(function() {
-	resizeDiv();
+  resizeDiv();
 })
 
 //Runs resizeDiv function on window resize
 window.onresize = function() {
-	resizeDiv();
+  resizeDiv();
 };
 
 function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
-	$("#headerSection").css({'height': (vph * .95) + 'px'})
-	$("#nav").css({'height': vph * .05 + 'px'})
-  $("#navFixed").css({'height': vph * .05 + 'px'})
+  console.log(vph)
+  $("#headerSection").css({'height': (vph) + 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975 - 110)+ 'px'})
 }
 
 //add click listener
@@ -83,7 +83,7 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     //if user scrolls to the top of the hidden portion of the fixed elements
-    if (scroll >= ($(window).height()*.95)) {
+    if (scroll >= ($(window).height() - 110)) {
 
     //then fix the navbar
     $(".nav").addClass('navFixed');

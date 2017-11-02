@@ -28,7 +28,7 @@ $(document).ready(function(){
         // Using jQuery's animate() method to add smooth page scroll
         $('html, body').animate({
           scrollTop: $(hash).offset().top -55
-        }, 800, function(){
+        }, 1500, function(){
         });
       };
     });

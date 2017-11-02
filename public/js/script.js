@@ -47,7 +47,7 @@ window.onresize = function() {
 function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
-	$("#headerSection").css({'height': (vph * .90) + 'px'})
+	$("#headerSection").css({'height': (vph * .95) + 'px'})
 	$("#nav").css({'height': vph * .05 + 'px'})
   $("#navFixed").css({'height': vph * .05 + 'px'})
 }

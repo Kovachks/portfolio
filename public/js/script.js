@@ -49,7 +49,8 @@ function resizeDiv() {
   vph = $(window).height();
   console.log(vph)
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .4975 - 110)+ 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975 - 85)+ 'px'})
+  $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
 }
 
 //add click listener

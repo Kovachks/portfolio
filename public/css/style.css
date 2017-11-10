@@ -309,14 +309,23 @@ mainBody {
     .name {
         font-size: 80px;
     }
+    #aboutMe {
+        font-size: 100px;
+    }
+    .aboutMeText {
+        font-size: 30px;
+    }
+    #projects {
+        font-size: 100px;
+    }
     .jobTitle {
         font-size: 80px;
     }
     .projectDiv {
-        width: 485px;
+        width: 700px;
     }
     .projectLink {
-        margin: 15px 115px
+        margin: 15px 221px
     }
     .contactSmall {
         height: 50px;

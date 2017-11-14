@@ -27,7 +27,7 @@ $(document).ready(function(){
   
         // Using jQuery's animate() method to add smooth page scroll
         $('html, body').animate({
-          scrollTop: $(hash).offset().top -55
+          scrollTop: $(hash).offset().top -35
         }, 1500, function(){
         });
       };
@@ -125,20 +125,31 @@ $(window).scroll(function() {
     $("#projectsLink").switchClass("navLinkSelected", "navLink")
     $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
     $("#homeLink").switchClass("navLinkSelected", "navLink")
+    $("#skillsLink").switchClass("navLinkSelected", "navLink")
   }
   
   else if ((currentWindow + 80) > $("#projects").offset().top) {
       $("#projectsLink").switchClass("navLink","navLinkSelected")
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
       $("#contactLink").switchClass("navLinkSelected", "navLink")
-      $("#homeLink").switchClass("navLinkSelected", "navLink")    
+      $("#homeLink").switchClass("navLinkSelected", "navLink")
+      $("#skillsLink").switchClass("navLinkSelected", "navLink")  
   }
+
+  else if ((currentWindow + 80) > $("#skills").offset().top) {
+    $("#skillsLink").switchClass("navLink","navLinkSelected")
+    $("#projectsLink").switchClass("navLinkSelected", "navLink")
+    $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
+    $("#contactLink").switchClass("navLinkSelected", "navLink")
+    $("#homeLink").switchClass("navLinkSelected", "navLink")    
+}
   
   else if ((currentWindow + 80) > $("#aboutMe").offset().top) {
     $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
     $("#projectsLink").switchClass("navLinkSelected", "navLink")
     $("#contactLink").switchClass("navLinkSelected", "navLink")
     $("#homeLink").switchClass("navLinkSelected", "navLink")    
+    $("#skillsLink").switchClass("navLinkSelected", "navLink")  
   }
   
   else if (currentWindow < $("#aboutMe").offset().top) {
@@ -146,5 +157,6 @@ $(window).scroll(function() {
     $("#projectsLink").switchClass("navLinkSelected", "navLink")
     $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
     $("#contactLink").switchClass("navLinkSelected", "navLink")    
+    $("#skillsLink").switchClass("navLinkSelected", "navLink")
   }
 })

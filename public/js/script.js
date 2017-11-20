@@ -11,25 +11,24 @@ var winWidth = $(window).width();
 //-------------Functions-----------
 
 
+function isTouchDevice() {
+  return 'ontouchstart' in document.documentElement;
+}
+
 $( document ).ready(function() {      
   var is_mobile = false;
 
-  if(winWidth < 761) {
-      is_mobile = true;       
-  }
-
-  //Running site specific JS for mobile experience
-  if (is_mobile == true) {
+  if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
-  } 
-  
-  //Adding site specific JS for desktop experience
-  else {
+    // on Mobile
+}
+else {
+    //Adding site specific JS for desktop experience
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
       
-          // Make sure this.hash has a value before overriding default behavior
+      // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
     
         // Prevent default anchor click behavior
@@ -46,8 +45,8 @@ $( document ).ready(function() {
       };
     });
 
+}
 
-  }
 });
 
 //Function for smooth scrolling functions

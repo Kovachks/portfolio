@@ -18,25 +18,23 @@ $( document ).ready(function() {
       is_mobile = true;       
   }
 
-  // now i can use is_mobile to run javascript conditionally
-
+  //Running site specific JS for mobile experience
   if (is_mobile == true) {
-    console.log("This script is working")
-  }
-});
-
-//Function for smooth scrolling functions
-$(document).ready(function(){
-
+    $(".nav").css({"display": "none"})
+    $(".bottomBorderHidden").css({"display": "none"})
+  } 
+  
+  //Adding site specific JS for desktop experience
+  else {
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-  
-      // Make sure this.hash has a value before overriding default behavior
+      
+          // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
-
+    
         // Prevent default anchor click behavior
-		    event.preventDefault();
-		
+        event.preventDefault();
+    
         // Store hash
         var hash = this.hash;
   
@@ -47,7 +45,34 @@ $(document).ready(function(){
         });
       };
     });
-  });
+
+
+  }
+});
+
+//Function for smooth scrolling functions
+$(document).ready(function(){
+
+    // // Add smooth scrolling to all links
+    // $("a").on('click', function(event) {
+  
+    //   // Make sure this.hash has a value before overriding default behavior
+    //   if (this.hash !== "") {
+
+    //     // Prevent default anchor click behavior
+		//     event.preventDefault();
+		
+    //     // Store hash
+    //     var hash = this.hash;
+  
+    //     // Using jQuery's animate() method to add smooth page scroll
+    //     $('html, body').animate({
+    //       scrollTop: $(hash).offset().top -40
+    //     }, 1500, function(){
+    //     });
+    //   };
+    // });
+});
 
 //Runs resizeDiv function on page load
 $(document).ready(function() {

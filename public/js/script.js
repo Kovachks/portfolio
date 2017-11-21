@@ -19,8 +19,13 @@ $(document).ready(function() {
   if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
+    $(".profilePicMax").css({"border-width": "6px"})
 
     resizeDivMobile();
+
+    window.onresize = function() {
+      resizeDivMobile()
+    }
 
   }
   else {

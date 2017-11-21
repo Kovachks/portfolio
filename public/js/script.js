@@ -15,13 +15,10 @@ function isTouchDevice() {
   return 'ontouchstart' in document.documentElement;
 }
 
-$( document ).ready(function() {      
-  var is_mobile = false;
-
+$( document ).ready(function() {
   if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
-    // on Mobile
 }
 else {
     //Adding site specific JS for desktop experience

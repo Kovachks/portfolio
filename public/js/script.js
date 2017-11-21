@@ -19,10 +19,16 @@ $(document).ready(function() {
   if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
+
+    resizeDivMobile();
+
   }
   else {
-    //Adding site specific JS for desktop experience
 
+    //Running resizeDivDesktop on page load
+    resizeDivDesktop();
+
+    //Adding site specific JS for desktop experience
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
       
@@ -42,6 +48,13 @@ $(document).ready(function() {
         });
       };
     });
+
+    //Runs resizeDiv function on window resize
+    window.onresize = function() {
+      resizeDivDesktop();
+    };
+
+
   }
 });
 
@@ -69,22 +82,27 @@ $(document).ready(function(){
     // });
 });
 
-//Runs resizeDiv function on page load
-$(document).ready(function() {
-  resizeDiv();
-})
+// //Runs resizeDiv function on page load
+// $(document).ready(function() {
+//   resizeDivDesktop();
+// })
 
-//Runs resizeDiv function on window resize
-window.onresize = function() {
-  resizeDiv();
-};
-
-function resizeDiv() {
+function resizeDivDesktop() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
   $(".bottomBorder").css({'height': (vph * .4975 - 82)+ 'px'})
   $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
+}
+
+function resizeDivMobile() {
+  console.log("resize Div is being called")
+  vpw = $(window).width();
+  vph = $(window).height();
+  $("#headerSection").css({'height': (vph) + 'px'})
+  $(".bottomBorder").css({'height': (vph * .495) + 'px'})
+  $(".nameHeader").css({'height': (vph * .495) + 'px'})
+  $('.border').css({'height': (vph * .01) + 'px'})
 }
 
 //add click listener

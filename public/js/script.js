@@ -8,20 +8,21 @@ var winHeight = $(window).height();
 
 var winWidth = $(window).width();
 
-//-------------Functions-----------
+//-------------Functions------------
 
 
 function isTouchDevice() {
   return 'ontouchstart' in document.documentElement;
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
   if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
-}
-else {
+  }
+  else {
     //Adding site specific JS for desktop experience
+
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
       
@@ -41,9 +42,7 @@ else {
         });
       };
     });
-
-}
-
+  }
 });
 
 //Function for smooth scrolling functions
@@ -83,7 +82,6 @@ window.onresize = function() {
 function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
-  console.log(vph)
   $("#headerSection").css({'height': (vph) + 'px'})
   $(".bottomBorder").css({'height': (vph * .4975 - 82)+ 'px'})
   $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
@@ -160,16 +158,11 @@ $(window).scroll(function() {
     if ((currentWindow + 160) > $("#contact").offset().top) {
       $("#contactLink").switchClass("navLink", "navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
-      $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
-      $("#homeLink").switchClass("navLinkSelected", "navLink")
-      $("#skillsLink").switchClass("navLinkSelected", "navLink")
     }
     
     else if ((currentWindow + 80) > $("#projects").offset().top) {
         $("#projectsLink").switchClass("navLink","navLinkSelected")
-        $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
         $("#contactLink").switchClass("navLinkSelected", "navLink")
-        $("#homeLink").switchClass("navLinkSelected", "navLink")
         $("#skillsLink").switchClass("navLinkSelected", "navLink")  
     }
 
@@ -177,23 +170,16 @@ $(window).scroll(function() {
       $("#skillsLink").switchClass("navLink","navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
-      $("#contactLink").switchClass("navLinkSelected", "navLink")
-      $("#homeLink").switchClass("navLinkSelected", "navLink")    
   }
     
     else if ((currentWindow + 80) > $("#aboutMe").offset().top) {
       $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
-      $("#projectsLink").switchClass("navLinkSelected", "navLink")
-      $("#contactLink").switchClass("navLinkSelected", "navLink")
       $("#homeLink").switchClass("navLinkSelected", "navLink")    
       $("#skillsLink").switchClass("navLinkSelected", "navLink")  
     }
     
     else if (currentWindow < $("#aboutMe").offset().top) {
       $("#homeLink").switchClass("navLink", "navLinkSelected")
-      $("#projectsLink").switchClass("navLinkSelected", "navLink")
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
-      $("#contactLink").switchClass("navLinkSelected", "navLink")    
-      $("#skillsLink").switchClass("navLinkSelected", "navLink")
     }
   })

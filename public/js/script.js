@@ -32,6 +32,7 @@ $(document).ready(function() {
 
     //Running resizeDivDesktop on page load
     resizeDivDesktop();
+    namePosition();
 
     //Adding site specific JS for desktop experience
     // Add smooth scrolling to all links
@@ -43,7 +44,7 @@ $(document).ready(function() {
         // Prevent default anchor click behavior
         event.preventDefault();
     
-        // Store hash
+        // Store hash 
         var hash = this.hash;
   
         // Using jQuery's animate() method to add smooth page scroll
@@ -58,39 +59,18 @@ $(document).ready(function() {
     window.onresize = function() {
       resizeDivDesktop();
     };
-
-
   }
 });
 
-//Function for smooth scrolling functions
-$(document).ready(function(){
-
-    // // Add smooth scrolling to all links
-    // $("a").on('click', function(event) {
-  
-    //   // Make sure this.hash has a value before overriding default behavior
-    //   if (this.hash !== "") {
-
-    //     // Prevent default anchor click behavior
-		//     event.preventDefault();
-		
-    //     // Store hash
-    //     var hash = this.hash;
-  
-    //     // Using jQuery's animate() method to add smooth page scroll
-    //     $('html, body').animate({
-    //       scrollTop: $(hash).offset().top -40
-    //     }, 1500, function(){
-    //     });
-    //   };
-    // });
-});
-
-// //Runs resizeDiv function on page load
-// $(document).ready(function() {
-//   resizeDivDesktop();
-// })
+function namePosition() {
+  var picturePosition = $('.profilePicMax').offset();
+  var pictureHeight = $('.profilePicMax').height();
+  console.log("profile pic position " + JSON.stringify(picturePosition))
+  vph = $(window).height();
+  console.log((picturePosition.top - (vph*.1)))
+  $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
+  $(".jobTitle").css({'top': ((pictureHeight * .5 -130)) + 'px'})
+}
 
 function resizeDivDesktop() {
   vpw = $(window).width();
@@ -105,9 +85,9 @@ function resizeDivMobile() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .495) + 'px'})
-  $(".nameHeader").css({'height': (vph * .495) + 'px'})
-  $('.border').css({'height': (vph * .01) + 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975) + 'px'})
+  $(".nameHeader").css({'height': (vph * .4975) + 'px'})
+  $('.border').css({'height': (vph * .005) + 'px'})
 }
 
 //add click listener

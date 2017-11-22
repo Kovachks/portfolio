@@ -16,44 +16,29 @@ function isTouchDevice() {
 }
 
 $(document).ready(function() {
+
+  //If the window is touch screen 
   if (isTouchDevice()) {
     $(".nav").css({"display": "none"})
     $(".bottomBorderHidden").css({"display": "none"})
     $(".profilePicMax").css({"border-width": "6px"})
-
+    
+    //Resizing the mobile screen on page load
     resizeDivMobile();
 
+    //Resizing the mobile screen on window resize
     window.onresize = function() {
       resizeDivMobile()
     }
-
   }
   else {
 
-    //Running resizeDivDesktop on page load
+    //Running functions on page load for desktop
     resizeDivDesktop();
     namePosition();
-
-    //Adding site specific JS for desktop experience
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-      
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-    
-        // Prevent default anchor click behavior
-        event.preventDefault();
-    
-        // Store hash 
-        var hash = this.hash;
-  
-        // Using jQuery's animate() method to add smooth page scroll
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top -40
-        }, 1500, function(){
-        });
-      };
-    });
+    smoothScrolling();
+    navFix();
+    navDecorate();
 
     //Runs resizeDiv function on window resize
     window.onresize = function() {
@@ -61,6 +46,9 @@ $(document).ready(function() {
     };
   }
 });
+
+
+//------------------------------------Functions----------------------------------------
 
 function namePosition() {
   var picturePosition = $('.profilePicMax').offset();
@@ -90,6 +78,29 @@ function resizeDivMobile() {
   $('.border').css({'height': (vph * .005) + 'px'})
 }
 
+function smoothScrolling() {
+    //Adding site specific JS for desktop experience
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+      
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+    
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash 
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top -40
+        }, 1500, function(){
+        });
+      };
+    });
+  }
+
 //add click listener
 $("#send_email").click(function() {
 	
@@ -117,40 +128,43 @@ $("#send_email").click(function() {
 });
 
 //Functiion for scrolling and fixing the navbar and animation for the header
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
 
-    //if user scrolls to the top of the hidden portion of the fixed elements
-    if (scroll >= ($(window).height() - 110)) {
+function navFix() {
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
 
-    //then fix the navbar
-    $(".nav").addClass('navFixed');
+      //if user scrolls to the top of the hidden portion of the fixed elements
+      if (scroll >= ($(window).height() - 110)) {
 
-    //instantly display fixed nav bar
-    $(".bottomBorderHidden").addClass("bottomBorderFixed")
+      //then fix the navbar
+      $(".nav").addClass('navFixed');
 
-    //1 second animation for smaller portrait
-    $(".profilePicMin").switchClass("profilePicMin", "profilePicMinShown", 1000)
+      //instantly display fixed nav bar
+      $(".bottomBorderHidden").addClass("bottomBorderFixed")
 
-    //1 second animation for fixed name
-    $(".nameFixedMin").switchClass("nameFixedMin", "nameFixedMinShown", 1000)
-    
-    //Section to give some margin for the newly displayed fixed divs
-    $("#aboutMe").addClass("aboutMeMargin")
-    }
-    else {
+      //1 second animation for smaller portrait
+      $(".profilePicMin").switchClass("profilePicMin", "profilePicMinShown", 1000)
+
+      //1 second animation for fixed name
+      $(".nameFixedMin").switchClass("nameFixedMin", "nameFixedMinShown", 1000)
       
-        //Otherwise restore to default
-        $(".nav").removeClass("navFixed")
-        $(".bottomBorderHidden").removeClass("bottomBorderFixed")
-        $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
-        $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
-        $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
-    };
-});
-
+      //Section to give some margin for the newly displayed fixed divs
+      $("#aboutMe").addClass("aboutMeMargin")
+      }
+      else {
+        
+          //Otherwise restore to default
+          $(".nav").removeClass("navFixed")
+          $(".bottomBorderHidden").removeClass("bottomBorderFixed")
+          $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
+          $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
+          $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
+      };
+  });
+}
 
   //Beginning of function to decorate nav links based on current element selection
+function navDecorate() {
   $(window).scroll(function() {
 
     //Storing variable for current scroll position
@@ -186,3 +200,4 @@ $(window).scroll(function() {
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
     }
   })
+};

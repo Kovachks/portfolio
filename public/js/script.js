@@ -43,6 +43,7 @@ $(document).ready(function() {
     //Runs resizeDiv function on window resize
     window.onresize = function() {
       resizeDivDesktop();
+      namePosition();
     };
   }
 });
@@ -57,7 +58,7 @@ function namePosition() {
   vph = $(window).height();
   console.log((picturePosition.top - (vph*.1)))
   $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
-  $(".jobTitle").css({'top': ((pictureHeight * .5 -130)) + 'px'})
+  $(".jobTitle").css({'top': ((pictureHeight * .2 -130)) + 'px'})
 }
 
 function resizeDivDesktop() {

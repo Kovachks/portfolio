@@ -221,6 +221,38 @@ mainBody {
     width: 600px;
     height: 25px;
 }
+.leftPortfolioText {
+    width: 500px;
+    height: 250px;
+    float: left;
+    padding: 113px 0 0 0;
+}
+.rightPortfolioLink {
+    float: right;
+    display: block;
+    height: 250px;
+    width: 250px;
+}
+.rightPortfolioImage {
+    height: 100%;
+    width: 100%;
+}
+.rightPortfolioText {
+    width: 500px;
+    height: 250px;
+    float: right;
+    padding: 113px 0 0 0;
+}
+.leftPortfolioLink {
+    float: left;
+    display: block;
+    height: 250px;
+    width: 250px;
+}
+.leftPortfolioImage {
+    height: 100%;
+    width: 100%;
+}
 #content {
     font-size: 13.3333px;
     font-family: Arial;
@@ -292,9 +324,9 @@ mainBody {
 }
 
 @media only screen and (max-width: 1080px) and (min-width: 801px) {
-    .projectDiv {
+    /* .projectDiv {
         width: 750px;       
-    }
+    } */
     .projectLink {
         margin: 10px 60px;
     }

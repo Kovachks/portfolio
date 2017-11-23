@@ -25,17 +25,19 @@ $(document).ready(function() {
     
     //Resizing the mobile screen on page load
     resizeDivMobile();
+    namePositionMobile();
 
     //Resizing the mobile screen on window resize
     window.onresize = function() {
-      resizeDivMobile()
+      resizeDivMobile();
+      namePositionMobile();
     }
   }
   else {
 
     //Running functions on page load for desktop
     resizeDivDesktop();
-    namePosition();
+    namePositionDesktop();
     smoothScrolling();
     navFix();
     navDecorate();
@@ -43,7 +45,7 @@ $(document).ready(function() {
     //Runs resizeDiv function on window resize
     window.onresize = function() {
       resizeDivDesktop();
-      namePosition();
+      namePositionDesktop();
     };
   }
 });
@@ -51,14 +53,18 @@ $(document).ready(function() {
 
 //------------------------------------Functions----------------------------------------
 
-function namePosition() {
+function namePositionDesktop() {
   var picturePosition = $('.profilePicMax').offset();
   var pictureHeight = $('.profilePicMax').height();
-  console.log("profile pic position " + JSON.stringify(picturePosition))
   vph = $(window).height();
-  console.log((picturePosition.top - (vph*.1)))
   $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
   $(".jobTitle").css({'top': ((pictureHeight * .2 -130)) + 'px'})
+}
+
+function namePositionMobile() {
+  var picturePosition = $('.profilePicMax').offset();
+  var pictureHeight = $('.profilePicMax').height();
+
 }
 
 function resizeDivDesktop() {
@@ -70,7 +76,6 @@ function resizeDivDesktop() {
 }
 
 function resizeDivMobile() {
-  console.log("resize Div is being called")
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
@@ -80,54 +85,26 @@ function resizeDivMobile() {
 }
 
 function smoothScrolling() {
-    //Adding site specific JS for desktop experience
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-      
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
+  //Adding site specific JS for desktop experience
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
     
-        // Prevent default anchor click behavior
-        event.preventDefault();
-    
-        // Store hash 
-        var hash = this.hash;
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
   
-        // Using jQuery's animate() method to add smooth page scroll
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top -40
-        }, 1500, function(){
-        });
-      };
-    });
-  }
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Store hash 
+      var hash = this.hash;
 
-//add click listener
-$("#send_email").click(function() {
-	
-	//Populating variables from user input
-	from=$("#from").val();
-	name=$("#name").val();
-	text=$("#content").val();
-
-	//Clearing entered values after submission
-	$("#from").val("");
-	$("#name").val("");
-	$("#content").val("");
-	
-	if (from  !== "") {
-		$.get("/send", {from:from,name:name,text:text}, function(data) {
-			if(data=="sent")
-			{
-				//Triggering model after successful submission
-				alert("Message has been sent.  I will respond as soon as possible!")
-			}
-		})
-	} else {
-		alert("Email is required to send message.  Thanks!")
-	}
-});
-
+      // Using jQuery's animate() method to add smooth page scroll
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top -40
+      }, 1500);
+    };
+  });
+}
 //Functiion for scrolling and fixing the navbar and animation for the header
 
 function navFix() {
@@ -202,3 +179,31 @@ function navDecorate() {
     }
   })
 };
+
+//-----------------------------------Global Functions---------------------------------------
+
+//add click listener
+$("#send_email").click(function() {
+	
+	//Populating variables from user input
+	from=$("#from").val();
+	name=$("#name").val();
+	text=$("#content").val();
+
+	//Clearing entered values after submission
+	$("#from").val("");
+	$("#name").val("");
+	$("#content").val("");
+	
+	if (from  !== "") {
+		$.get("/send", {from:from,name:name,text:text}, function(data) {
+			if(data=="sent")
+			{
+				//Triggering model after successful submission
+				alert("Message has been sent.  I will respond as soon as possible!")
+			}
+		})
+	} else {
+		alert("Email is required to send message.  Thanks!")
+	}
+});

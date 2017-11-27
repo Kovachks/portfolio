@@ -42,13 +42,15 @@ app.get('/send',function(req,res){
     }
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function(error, response){
-     if(error){
+        if(error) {
             console.log(error);
         res.end("error");
-     }else{
+        }
+
+        else {
         res.end("sent");
-         }
-});
+        }
+    });
 });
 
 app.listen(PORT, function() {

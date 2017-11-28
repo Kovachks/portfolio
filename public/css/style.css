@@ -182,6 +182,9 @@ mainBody {
     margin: 0 2px;
     background-color: grey;
 }
+.projectItem {
+    height: 300px;
+}
 .projectImage {
     width: 250px;
     height: 250px;
@@ -222,15 +225,16 @@ mainBody {
 }
 .leftPortfolioText {
     width: 500px;
-    height: 250px;
     float: left;
-    padding: 113px 0 0 0;
+    height: 150px;
+    padding: 75px 0;
 }
 .rightPortfolioLink {
     float: right;
     display: block;
     height: 250px;
-    width: 250px;
+    width: 290px;
+    margin: 25px 0px;
 }
 .rightPortfolioImage {
     height: 100%;
@@ -238,15 +242,16 @@ mainBody {
 }
 .rightPortfolioText {
     width: 500px;
-    height: 250px;
     float: right;
-    padding: 113px 0 0 0;
+    height: 150px;
+    padding: 75px 0;
 }
 .leftPortfolioLink {
     float: left;
     display: block;
     height: 250px;
-    width: 250px;
+    width: 290px;
+    margin: 25px 0px;
 }
 .leftPortfolioImage {
     height: 100%;

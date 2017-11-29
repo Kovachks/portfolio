@@ -64,6 +64,8 @@ function namePositionDesktop() {
 function namePositionMobile() {
   var picturePosition = $('.profilePicMax').offset();
   var pictureHeight = $('.profilePicMax').height();
+  $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
+  $(".jobTitle").css({'top': ((pictureHeight * .1 -300 )) + 'px'})
 
 }
 

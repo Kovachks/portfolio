@@ -345,6 +345,9 @@ mainBody {
     }
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .contactDiv {
+        height: 1000px;
+    }
     .profilePicMax {
         height: 600px;
         width: 600px;
@@ -396,7 +399,7 @@ mainBody {
         font-size: 30px;
     }
     .footer {
-        height: 450px;
+        height: 500px;
     }
     .leftFooter {
         width: 100%;

@@ -399,21 +399,41 @@ mainBody {
         font-size: 30px;
     }
     .footer {
-        height: 500px;
+        height: 700px;
     }
     .leftFooter {
         width: 100%;
-        margin: 0
+        margin: 0 0 32px;
+        height: 158.2px;
     }
     .middleFooter {
         width: 100%;
-        margin: 0        
+        margin: 0;
+        height: 314px; 
     }
     .rightFooter {
         width: 100%;
         margin: 0
     }
     .copyrightText {
-        font-size: 30px;
+        font-size: 35px;
+    }
+    .logo{
+        height: 250px;
+        width: 250px;
+        padding: 20px 0;
+    }
+    .logoDiv {
+        margin: 32px auto;
+        width: 50%;
+    }
+    .thumbnailLink {
+        height: 100px;
+        width: 100px;
+        margin: 0 15px;
+    }
+    .thumbnail {
+        height: 100px;
+        width: 100px;
     }
 }

@@ -346,7 +346,7 @@ mainBody {
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .contactDiv {
-        height: 1000px;
+        height: 1300px;
     }
     .profilePicMax {
         height: 600px;
@@ -376,15 +376,15 @@ mainBody {
         margin: 15px 221px
     }
     .contactSmall {
-        height: 50px;
+        height: 75px;
         width: 85%;
         margin: 15px 7.5%;
         border: 3px solid black;
-        font-size: 30px;
+        font-size: 50px;
     }
     #content {
-        height: 250px;
-        font-size: 40px;
+        height: 450px;
+        font-size: 50px;
         width: 85%;
         margin: 15px 7.5%;
         border: 3px solid black;
@@ -393,9 +393,9 @@ mainBody {
         font-size: 100px;
     }
     #send_email {
-        height: 100px;
-        width: 200px;
-        margin-top: 50px;
+        height: 150px;
+        width: 300px;
+        margin-top: 100px;
         font-size: 30px;
     }
     .footer {

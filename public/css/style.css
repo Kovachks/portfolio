@@ -260,6 +260,9 @@ mainBody {
     font-family: Arial;
     height: 150px;
 }
+#skills {
+    font-size: 35px;
+}
 #send_email {
     display: block;
     margin: 10px auto 200px auto;
@@ -446,5 +449,43 @@ mainBody {
         width: 80%;
         margin-right: auto;
         margin-left: auto;
+    }
+    #skills {
+        font-size: 100px;
+    }
+    .leftPortfolioText{
+        display: block;
+        float: none;
+        font-size: 35px;
+        width: 90%;
+        margin: 20px auto;
+        height: 350px;
+        padding: 0;
+    }
+    .rightPortfolioText{
+        float: none;
+        display: block;
+        font-size: 35px;
+        width: 90%;
+        margin: 20px auto;
+        height: 650px;
+        padding: 0;
+    }
+    .leftPortfolioLink{
+        float: none;
+        display: block;
+        width: 75%;
+        margin: 20px auto;
+        height: 600px;
+    }
+    .rightPortfolioLink{
+        float: none;
+        display: block;
+        width: 75%;
+        margin: 20px auto;
+        height: 600px;
+    }
+    .projectItem{
+        height: 1000px;
     }
 }

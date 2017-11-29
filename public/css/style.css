@@ -438,6 +438,10 @@ mainBody {
         height: 682px;
         width: 90%;
     }
+    #aboutMePic {
+        height: 400px;
+        width: 305px;
+    }
     .sectionHeader {
         width: 80%;
         margin-right: auto;

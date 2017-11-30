@@ -221,11 +221,23 @@ mainBody {
     width: 600px;
     height: 25px;
 }
-.leftPortfolioText {
-    width: 500px;
+.textHolderLeft {
     float: left;
-    height: 150px;
-    padding: 75px 0;
+    width: 500px;
+    height: 100%;
+    display: table;
+}
+.textHolderRight {
+    width: 500px;
+    height: 100%;
+    float: right;
+    display: table;
+}
+.leftPortfolioText {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 .rightPortfolioLink {
     float: right;
@@ -239,10 +251,10 @@ mainBody {
     width: 100%;
 }
 .rightPortfolioText {
-    width: 500px;
-    float: right;
-    height: 150px;
-    padding: 75px 0;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 .leftPortfolioLink {
     float: left;

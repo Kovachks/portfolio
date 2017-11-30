@@ -195,7 +195,9 @@ mainBody {
     overflow: hidden;
 }
 .skillsDiv {
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
     height: 500px;
 }
 .skills {
@@ -232,6 +234,20 @@ mainBody {
     height: 100%;
     float: right;
     display: table;
+}
+.sqlImageDiv {
+    margin: 5px 10px;
+    height: 175px;
+    width: 175px;
+}
+.skillImage {
+    height: 175px;
+    width: 175px;
+    margin: 5px 10px;
+}
+.sqlImage {
+    height: 80%;
+    width: 100%;
 }
 .leftPortfolioText {
     width: 100%;

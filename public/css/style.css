@@ -152,7 +152,7 @@ mainBody {
 .sectionHeader {
     margin: 80px 25% 0 25%;
     width: 50%;
-    padding: 80px 0 0 0;
+    padding: 30px 0 40px 0;
     font-size: 35px;
     text-align: center;
 }
@@ -189,10 +189,9 @@ mainBody {
     border: 2px solid black;
 }
 .projectDiv {
-    display: block;
     margin: 0 auto 100px auto;
     width: 90%;
-    overflow: hidden;
+
 }
 .skillsDiv {
     width: 800px;
@@ -212,6 +211,9 @@ mainBody {
     height: 250px;
     margin: 0 25px 10px 25px;
     width: 200px;
+}
+.projectHeader {
+    margin-top:0;
 }
 .aboutMeText {
     margin: 25px;

@@ -114,7 +114,7 @@ function navFix() {
       var scroll = $(window).scrollTop();
 
       //if user scrolls to the top of the hidden portion of the fixed elements
-      if (scroll >= ($(window).height() - 110)) {
+      if (scroll >= ($(window).height() - 25)) {
 
       //then fix the navbar
       $(".nav").addClass('navFixed');
@@ -142,7 +142,7 @@ function navFix() {
       };
   });
 }
-
+var currentWindow = $(window).scrollTop()
   //Beginning of function to decorate nav links based on current element selection
 function navDecorate() {
   $(window).scroll(function() {
@@ -152,24 +152,24 @@ function navDecorate() {
 
     //Beginning of if statement.  If current scroll position + 80px padding is greater than selected element
     //then the switch class will fire and nav links will be styled differently.
-    if ((currentWindow + 160) > $("#contact").offset().top) {
+    if ((currentWindow) > $("#contact").offset().top) {
       $("#contactLink").switchClass("navLink", "navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
     }
     
-    else if ((currentWindow + 80) > $("#projects").offset().top) {
+    else if ((currentWindow -40) > $("#projects").offset().top) {
         $("#projectsLink").switchClass("navLink","navLinkSelected")
         $("#contactLink").switchClass("navLinkSelected", "navLink")
         $("#skillsLink").switchClass("navLinkSelected", "navLink")  
     }
 
-    else if ((currentWindow + 80) > $("#skills").offset().top) {
+    else if ((currentWindow - 40) > $("#skills").offset().top) {
       $("#skillsLink").switchClass("navLink","navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
   }
     
-    else if ((currentWindow + 80) > $("#aboutMe").offset().top) {
+    else if ((currentWindow - 40) > $("#aboutMe").offset().top) {
       $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
       $("#homeLink").switchClass("navLinkSelected", "navLink")    
       $("#skillsLink").switchClass("navLinkSelected", "navLink")  
@@ -181,6 +181,7 @@ function navDecorate() {
     }
   })
 };
+console.log(currentWindow)
 
 //-----------------------------------Global Functions---------------------------------------
 

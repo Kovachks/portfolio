@@ -143,33 +143,36 @@ function navFix() {
   });
 }
 var currentWindow = $(window).scrollTop()
+$(window).scroll(function() {
+  console.log($("#skills").offset().top)
+console.log(currentWindow)
+})
   //Beginning of function to decorate nav links based on current element selection
 function navDecorate() {
   $(window).scroll(function() {
-
     //Storing variable for current scroll position
     var currentWindow = $(window).scrollTop()
 
     //Beginning of if statement.  If current scroll position + 80px padding is greater than selected element
     //then the switch class will fire and nav links will be styled differently.
-    if ((currentWindow) > $("#contact").offset().top) {
+    if ((currentWindow + 110) > $("#contact").offset().top) {
       $("#contactLink").switchClass("navLink", "navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
     }
     
-    else if ((currentWindow -40) > $("#projects").offset().top) {
+    else if ((currentWindow + 110) > $("#projects").offset().top) {
         $("#projectsLink").switchClass("navLink","navLinkSelected")
         $("#contactLink").switchClass("navLinkSelected", "navLink")
         $("#skillsLink").switchClass("navLinkSelected", "navLink")  
     }
 
-    else if ((currentWindow - 40) > $("#skills").offset().top) {
+    else if ((currentWindow + 110) > $("#skills").offset().top) {
       $("#skillsLink").switchClass("navLink","navLinkSelected")
       $("#projectsLink").switchClass("navLinkSelected", "navLink")
       $("#aboutMeLink").switchClass("navLinkSelected", "navLink")
   }
     
-    else if ((currentWindow - 40) > $("#aboutMe").offset().top) {
+    else if ((currentWindow + 110) > $("#aboutMe").offset().top) {
       $("#aboutMeLink").switchClass("navLink", "navLinkSelected")
       $("#homeLink").switchClass("navLinkSelected", "navLink")    
       $("#skillsLink").switchClass("navLinkSelected", "navLink")  

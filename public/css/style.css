@@ -504,7 +504,7 @@ mainBody {
     .leftPortfolioLink{
         float: none;
         display: block;
-        width: 75%;
+        width: 80%;
         margin: 20px auto;
         height: 600px;
     }
@@ -512,20 +512,20 @@ mainBody {
         float: none;
         height: 500px;
         display: block;
-        width: 75%;
+        width: 80%;
         margin: 50px auto 100px auto;
     }
     .textHolderRight {
         float: none;
         height: 500px;
         display: block;
-        width: 75%;
+        width: 80%;
         margin: 50px auto 100px auto;
     }
     .rightPortfolioLink{
         float: none;
         display: block;
-        width: 75%;
+        width: 80%;
         margin: 20px auto;
         height: 600px;
     }

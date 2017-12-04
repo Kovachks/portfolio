@@ -239,7 +239,7 @@ mainBody {
 }
 .sqlImageDiv {
     margin: 5px 10px;
-    height: 175px;
+    height: 17`5px;
     width: 175px;
 }
 .skillImage {
@@ -489,7 +489,7 @@ mainBody {
         font-size: 35px;
         width: 90%;
         margin: 20px auto;
-        height: 350px;
+        height: 650px;
         padding: 0;
     }
     .rightPortfolioText{
@@ -508,6 +508,18 @@ mainBody {
         margin: 20px auto;
         height: 600px;
     }
+    .textHolderLeft {
+        float: none;
+        display: block;
+        width: 75%;
+        margin: 20px auto 100px auto;
+    }
+    .textHolderRight {
+        float: none;
+        display: block;
+        width: 75%;
+        margin: 20px auto 100px auto;
+    }
     .rightPortfolioLink{
         float: none;
         display: block;
@@ -516,6 +528,6 @@ mainBody {
         height: 600px;
     }
     .projectItem{
-        height: 1000px;
+        height: 1200px;
     }
-}
+}   

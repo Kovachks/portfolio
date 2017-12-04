@@ -1,3 +1,6 @@
+html {
+    font-family: 'Noto Sans', sans-serif;
+}
 .profilePicMin {
     height: 55px;
     opacity: 0;

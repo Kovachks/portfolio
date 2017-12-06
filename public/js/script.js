@@ -19,13 +19,11 @@ $(document).ready(function() {
 
   //If the window is touch screen 
   if (isTouchDevice()) {
-    $(".nav").css({"display": "none"})
-    $(".bottomBorderHidden").css({"display": "none"})
-    $(".profilePicMax").css({"border-width": "6px"})
     
     //Resizing the mobile screen on page load
     resizeDivMobile();
     namePositionMobile();
+    removeNav()
 
     //Resizing the mobile screen on window resize
     window.onresize = function() {
@@ -52,6 +50,12 @@ $(document).ready(function() {
 
 
 //------------------------------------Functions----------------------------------------
+
+function removeNav() {
+  $(".nav").css({"display": "none"})
+  $(".bottomBorderHidden").css({"display": "none"})
+  $(".profilePicMax").css({"border-width": "6px"})
+}
 
 function namePositionDesktop() {
   var picturePosition = $('.profilePicMax').offset();

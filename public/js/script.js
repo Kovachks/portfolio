@@ -85,7 +85,8 @@ function resizeDivMobile() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .4975) + 'px'})
+  $(".bottomBorder").css({'height': (vph * .4275) + 'px'})
+  $(".bottomLinkBorder").css({'height': (vph * .07) + 'px'})
   $(".nameHeader").css({'height': (vph * .4975) + 'px'})
   $('.border').css({'height': (vph * .005) + 'px'})
 }

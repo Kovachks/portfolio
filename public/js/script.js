@@ -77,7 +77,7 @@ function resizeDivDesktop() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .4975 - 132)+ 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975 - 82)+ 'px'})
   $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
 }
 
@@ -89,6 +89,9 @@ function resizeDivMobile() {
   $(".bottomLinkBorder").css({'height': (vph * .07) + 'px'})
   $(".nameHeader").css({'height': (vph * .4975) + 'px'})
   $('.border').css({'height': (vph * .005) + 'px'})
+  $('.thumbnailHeader').css({'height': (vph * .07) - 4 + 'px'})
+  $('.thumbnailHeader').css({'width': (vph * .07) - 4 + 'px'})
+  $('.linkDiv').css({'width': (vph * .21) + 14 + 'px'})
 }
 
 function smoothScrolling() {

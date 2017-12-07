@@ -50,7 +50,7 @@ mainBody {
     display: block;
     margin: 0 auto;
     width: 150px;
-    height: 50px;
+    height: 100%;
 }
 .linkDivHidden {
     opacity: 0;
@@ -193,8 +193,13 @@ mainBody {
     background-color: grey;
 }
 .thumbnailHeader {
-    height: 45px;
-    width: 45px;
+    width: 33%;
+    float: left;
+    margin: 0 2px;
+}
+.thumbnailHead{
+    height: 100%;
+    width: 100%;
     float: left;
     margin: 0 2px;
 }

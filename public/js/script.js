@@ -77,7 +77,9 @@ function resizeDivDesktop() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .4975 - 82)+ 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975 - 132)+ 'px'})
+  $(".linkDiv").css({'height': 54 + 'px'})
+  $(".linkDiv").css({'width': 154 + 'px'})
   $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
 }
 

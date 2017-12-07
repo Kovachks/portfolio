@@ -23,7 +23,7 @@ $(document).ready(function() {
     //Resizing the mobile screen on page load
     resizeDivMobile();
     namePositionMobile();
-    removeNav()
+    removeNav();
 
     //Resizing the mobile screen on window resize
     window.onresize = function() {
@@ -77,7 +77,7 @@ function resizeDivDesktop() {
   vpw = $(window).width();
   vph = $(window).height();
   $("#headerSection").css({'height': (vph) + 'px'})
-  $(".bottomBorder").css({'height': (vph * .4975 - 82)+ 'px'})
+  $(".bottomBorder").css({'height': (vph * .4975 - 132)+ 'px'})
   $(".nameHeader").css({'height': (vph * .4975 - 30) + 'px'})
 }
 
@@ -134,7 +134,14 @@ function navFix() {
       
       //Section to give some margin for the newly displayed fixed divs
       $("#aboutMe").addClass("aboutMeMargin")
+
+      $(".linkDiv").css({'visibility': 'hidden'})
+
+      $(".linkDiv").remove();
+
+      // $(".linkDiv").switchClass("linkDiv", "linkDivHidden")
       }
+
       else {
         
           //Otherwise restore to default
@@ -143,7 +150,9 @@ function navFix() {
           $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
           $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
           $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
-      };
+          $(".linkDiv").remove()
+          $(".bottomBorderHidden").prepend("<div class='linkDiv'><a href='https://www.linkedin.com/in/keith-kovach-18687583/' class='thumbnailHeader' target='_blank'><img src='../../images/linkedInBlack.png' alt='' class='thumbnail'></a>          <a href='https://stackoverflow.com/users/8210602/kovachks' class='thumbnailHeader' target='_blank'><img src='../../images/stackoverflowBlack.png' alt='' class='thumbnail'></a><a href='https://github.com/Kovachks' class='thumbnailHeader' target='_blank'><img src='../../images/githubBlack.png' alt='' class='thumbnail'></a></div>")
+          };
   });
 }
 var currentWindow = $(window).scrollTop()

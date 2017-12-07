@@ -43,6 +43,18 @@ mainBody {
     margin: 0;
     width: 100%;
 }
+.linkDiv {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+}
+.linkDivHidden {
+    opacity: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+}
 .bottomBorderFixed {
     position:fixed;
     top:0;
@@ -51,7 +63,8 @@ mainBody {
     z-index: 1;
 }
 .bottomBorder {
-    height: 44.75%;
+    /* height: 44.75%; */
+    height: 20%;
     background-color: #cd5360;
 }
 .bottomBorderMin {
@@ -175,6 +188,12 @@ mainBody {
     float: left;
     margin: 15px 39px;
     background-color: grey;
+}
+.thumbnailHeader {
+    height: 45px;
+    width: 45px;
+    float: left;
+    margin: 0 2px;
 }
 .thumbnailLink {
     height: 45px;

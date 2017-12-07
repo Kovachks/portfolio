@@ -43,6 +43,9 @@ mainBody {
     margin: 0;
     width: 100%;
 }
+.bottomLinkBorder {
+    background-color: #cd5360;  
+}
 .linkDiv {
     display: block;
     margin: 0 auto;

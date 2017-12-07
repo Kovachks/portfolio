@@ -62,7 +62,7 @@ function namePositionDesktop() {
   var pictureHeight = $('.profilePicMax').height();
   vph = $(window).height();
   $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
-  $(".jobTitle").css({'top': ((pictureHeight * .2 -130)) + 'px'})
+  $(".jobTitle").css({'top': ((pictureHeight * .2 -150)) + 'px'})
 }
 
 function namePositionMobile() {
@@ -135,11 +135,6 @@ function navFix() {
       //Section to give some margin for the newly displayed fixed divs
       $("#aboutMe").addClass("aboutMeMargin")
 
-      $(".linkDiv").css({'visibility': 'hidden'})
-
-      $(".linkDiv").remove();
-
-      // $(".linkDiv").switchClass("linkDiv", "linkDivHidden")
       }
 
       else {
@@ -150,8 +145,6 @@ function navFix() {
           $(".profilePicMinShown").addClass("profilePicMin").removeClass("profilePicMinShown")
           $(".nameFixedMinShown").addClass("nameFixedMin").removeClass("nameFixedMinShown")
           $("#aboutMe").css({'margin-top': (winHeight * .1 + 130) + 'px'})
-          $(".linkDiv").remove()
-          $(".bottomBorderHidden").prepend("<div class='linkDiv'><a href='https://www.linkedin.com/in/keith-kovach-18687583/' class='thumbnailHeader' target='_blank'><img src='../../images/linkedInBlack.png' alt='' class='thumbnail'></a>          <a href='https://stackoverflow.com/users/8210602/kovachks' class='thumbnailHeader' target='_blank'><img src='../../images/stackoverflowBlack.png' alt='' class='thumbnail'></a><a href='https://github.com/Kovachks' class='thumbnailHeader' target='_blank'><img src='../../images/githubBlack.png' alt='' class='thumbnail'></a></div>")
           };
   });
 }

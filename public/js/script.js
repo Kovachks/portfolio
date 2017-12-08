@@ -19,20 +19,35 @@ $(document).ready(function() {
 
   //If the window is touch screen 
   if (isTouchDevice()) {
-    
-    //Resizing the mobile screen on page load
-    resizeDivMobile();
-    namePositionMobile();
-    removeNav();
-
-    //Resizing the mobile screen on window resize
-    window.onresize = function() {
+    console.log("This is a touch device")
+    if ( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      console.log("This is a mobile phone")
+      //Resizing the mobile screen on page load
       resizeDivMobile();
       namePositionMobile();
+      removeNav();
+
+      //Resizing the mobile screen on window resize
+      window.onresize = function() {
+        resizeDivMobile();
+        namePositionMobile();
+      }
+    }
+    else {
+      console.log("This is an IPAD")
+      resizeDivMobile();
+      removeNav();
+      namePositionTablet();
+
+
+      window.onresize = function() {
+        resizeDivMobile();
+        namePositionTablet();
+      }
     }
   }
   else {
-
+    ("This is not a touch device")
     //Running functions on page load for desktop
     resizeDivDesktop();
     namePositionDesktop();
@@ -70,6 +85,15 @@ function namePositionMobile() {
   var pictureHeight = $('.profilePicMax').height();
   $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
   $(".jobTitle").css({'top': ((pictureHeight * .1 -300 )) + 'px'})
+}
+
+
+function namePositionTablet() {
+  var picturePosition = $('.profilePicMax').offset();
+  var pictureHeight = $('.profilePicMax').height();
+  console.log(pictureHeight)
+  $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
+  $(".jobTitle").css({'top': ((pictureHeight * -.15 )) + 'px'})
 }
 
 function resizeDivDesktop() {
@@ -155,8 +179,6 @@ function navFix() {
 }
 var currentWindow = $(window).scrollTop()
 $(window).scroll(function() {
-  console.log($("#skills").offset().top)
-console.log(currentWindow)
 })
   //Beginning of function to decorate nav links based on current element selection
 function navDecorate() {
@@ -195,7 +217,6 @@ function navDecorate() {
     }
   })
 };
-console.log(currentWindow)
 
 //-----------------------------------Global Functions---------------------------------------
 

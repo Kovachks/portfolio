@@ -560,7 +560,7 @@ mainBody {
         height: 600px;
     }
     .projectItem{
-        height: 1100px;
+        height: 100%;
     }
 }   
 @media only screen and (min-device-width : 700px) and (max-device-width : 1030px) {
@@ -641,8 +641,6 @@ mainBody {
         height: 80px;
         width: 150px;
         margin: 30px auto;
-    }
-    .footer {
-        height: 300px;
+        font-size: 20px;
     }
 }

@@ -563,3 +563,86 @@ mainBody {
         height: 1100px;
     }
 }   
+@media only screen and (min-device-width : 700px) and (max-device-width : 1030px) {
+    .sectionHeader {
+        font-size: 50px;
+    }
+    #skills {
+        font-size: 50px;
+    }
+    .aboutMeText {
+        font-size: 30px;
+    }
+    .aboutMeDiv {
+        height: 800px;
+    }
+    #aboutMePic {
+        height: 300px;
+        width: 240px;
+    }
+    .skillsDiv{
+        width: 768px;;
+    }
+    .skillImage {
+        height: 165px;
+        width: 165px;
+    }
+    .projectDiv {
+        display: block;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .projectItem {
+        display: block;
+        width: 680px;
+        height: 100%;
+        margin: 20px auto;
+    }
+    .textHolderLeft {
+        height: 300px;
+        width: 575px;
+        margin: 40px auto 0 auto;
+        display: block;
+        float: none;
+        font-size: 25px;
+    }
+    .textHolderRight {
+        height: 300px;
+        width: 575px;
+        margin: 40px auto 0 auto;
+        display: block;
+        float: none;
+        font-size: 25px;
+    }
+    .rightPortfolioLink {
+        float: none;
+        height: 500px;
+        width: 468px;
+        margin: 0 auto;
+    }
+    .leftPortfolioLink {
+        float: none;
+        height: 500px;
+        width: 468px;
+        margin: 0 auto;
+    }
+    .contactSmall {
+        height: 60px;
+        font-size: 30px;
+    }
+    #content {
+        height: 500px;
+        font-size: 30px;
+    }
+    .contactDiv {
+        height: 1000px;
+    }
+    #send_email {
+        height: 80px;
+        width: 150px;
+        margin: 30px auto;
+    }
+    .footer {
+        height: 300px;
+    }
+}

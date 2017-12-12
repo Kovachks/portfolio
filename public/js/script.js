@@ -78,6 +78,7 @@ function namePositionDesktop() {
   vph = $(window).height();
   $(".name").css({'top': (picturePosition.top - (vph*.1)) + 'px'})
   $(".jobTitle").css({'top': ((pictureHeight * .2 -150)) + 'px'})
+  $(".thumbnailHeader").css({'display': 'none'})
 }
 
 function namePositionMobile() {

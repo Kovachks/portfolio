@@ -22,7 +22,7 @@ var smtpTransport = nodemailer.createTransport({
     secure: false,
     port: 25,
     auth: {
-        user: "KeithKovachPortfolio@gmail.com", //Your email here.  I created email specifically for site
+        user: "KeithKovachPortfolio@gmail.com",
         pass: config.password
     },
     tls: {

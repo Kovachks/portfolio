@@ -18,11 +18,11 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 var smtpTransport = nodemailer.createTransport({
-    service: "gmail",
+    service: "yahoo",
     secure: false,
     port: 25,
     auth: {
-        user: "KeithKovachPortfolio@gmail.com",
+        user: "keithkovachportfolio@yahoo.com",
         pass: config.password
     },
     tls: {

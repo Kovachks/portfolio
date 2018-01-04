@@ -4,6 +4,7 @@ var path = require("path");
 var config = require("./config.js")
 var $ = require('jquery');
 var nodemailer = require('nodemailer');
+var sgMail = require('@sendgrid/mail');
 
 var app = express();
 var PORT = process.env.PORT || 8000;
@@ -16,6 +17,11 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 app.use(express.static("public"));
+
+
+
+
+
 
 var smtpTransport = nodemailer.createTransport({
     service: "yahoo",
@@ -35,22 +41,14 @@ app.get("/", function(req, res) {
 })
 
 app.get('/send',function(req,res){
-    var mailOptions={
-        to : "kovachks90@gmail.com",
-        subject : "Message From Portfolio",
-        text : "Entered Email: " + req.query.from + "  Entered Name: " + req.query.name + "  Email Text: " + req.query.text
-    }
-    console.log(mailOptions);
-    smtpTransport.sendMail(mailOptions, function(error, response){
-        if(error) {
-            console.log(error);
-        res.end("error");
-        }
-
-        else {
-        res.end("sent");
-        }
-    });
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const msg = {
+    to: 'kovachks90@gmail.com',
+    from: 'test@example.com',
+    subject: 'Message From Portfolio',
+    text: "Entered Email: " + req.query.from + "  Entered Name: " + req.query.name + "  Email Text: " + req.query.text
+    };
+    sgMail.send(msg);
 });
 
 app.listen(PORT, function() {

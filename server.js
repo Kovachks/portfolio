@@ -18,24 +18,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("public"));
 
-
-
-
-
-
-var smtpTransport = nodemailer.createTransport({
-    service: "yahoo",
-    secure: false,
-    port: 25,
-    auth: {
-        user: "keithkovachportfolio@yahoo.com",
-        pass: config.password
-    },
-    tls: {
-        rejectUnauthorized: false
-    }
-});
-
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/html/home.html");
 })
@@ -44,7 +26,7 @@ app.get('/send',function(req,res){
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
     to: 'kovachks90@gmail.com',
-    from: 'test@example.com',
+    from: 'kovachkeithportfolio',
     subject: 'Message From Portfolio',
     text: "Entered Email: " + req.query.from + "  Entered Name: " + req.query.name + "  Email Text: " + req.query.text
     };

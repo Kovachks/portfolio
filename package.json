@@ -23,6 +23,7 @@
     "express-session": "^1.15.6",
     "jquery": "^3.2.1",
     "nodemailer": "^4.2.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sendgrid": "^5.2.3"
   }
 }

@@ -5,7 +5,7 @@ var config = require("./config.js")
 var $ = require('jquery');
 var nodemailer = require('nodemailer');
 var sgMail = require('@sendgrid/mail');
-var sq = require("sendgrid")(process.env.SENDGRID_API_KEY);
+var sg = require("sendgrid")(process.env.SENDGRID_API_KEY);
 
 var app = express();
 var PORT = process.env.PORT || 8000;

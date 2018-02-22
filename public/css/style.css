@@ -183,7 +183,7 @@ mainBody {
     height: 390px;
 }
 .aboutMeMargin {
-    margin: 190px 25% 0 25%;
+    margin: 0 25% 0 25%;
     width: 50%;
     font-size: 35px;
 }
@@ -211,6 +211,7 @@ mainBody {
     background-color: grey;
 }
 .projectItem {
+    margin: 0 5%;
     height: 300px;
 }
 .projectImage {
@@ -219,7 +220,9 @@ mainBody {
     border: 2px solid black;
 }
 .projectDiv {
-    margin: 0 auto 100px auto;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto 0 auto;
     width: 90%;
 
 }
@@ -291,7 +294,7 @@ mainBody {
     float: right;
     display: block;
     height: 250px;
-    width: 290px;
+    width: 350px;
     margin: 25px 0px;
 }
 .rightPortfolioImage {
@@ -303,12 +306,13 @@ mainBody {
     height: 100%;
     display: table-cell;
     vertical-align: middle;
+    overflow-wrap: break-word;
 }
 .leftPortfolioLink {
     float: left;
     display: block;
     height: 250px;
-    width: 290px;
+    width: 350px;
     margin: 25px 0px;
 }
 .leftPortfolioImage {
@@ -388,14 +392,14 @@ mainBody {
     }
 }
 
-@media only screen and (max-width: 1080px) and (min-width: 801px) {
-    /* .projectDiv {
+/* @media only screen and (max-width: 1080px) and (min-width: 801px) {
+    .projectDiv {
         width: 750px;       
-    } */
+    }
     .projectLink {
         margin: 10px 60px;
     }
-}
+} */
 
 @media only screen and (max-width: 800px) and (min-width: 641px) {
     .projectDiv {
@@ -642,5 +646,50 @@ mainBody {
         width: 150px;
         margin: 30px auto;
         font-size: 20px;
+    }
+}
+@media (min-width : 980px) and (max-width : 1250px) {
+    .projectItem {
+        margin: 0;
+    }
+    .rightPortfolioText {
+        width: 100%;
+    }
+    .textHolderRight {
+        width: 400px; 
+    }
+    .leftPortfolioText {
+        width: 100%;
+    }
+    .textHolderLeft {
+        width: 400px; 
+    }
+}
+@media (max-width: 979px) {
+    .projectItem {
+        height: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        display: block;
+    }
+    .leftPortfolioLink {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .textHolderRight {
+        float: none;
+        display: block;
+        margin: 30px auto 100px auto;
+    }
+    .rightPortfolioLink {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .textHolderLeft {
+        float: none;
+        display: block;
+        margin: 30px auto 100px auto;
     }
 }

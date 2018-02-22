@@ -160,7 +160,7 @@ function navFix() {
       $(".profilePicMin").switchClass("profilePicMin", "profilePicMinShown", 1000)
 
       //1 second animation for fixed name
-      $(".nameFixedMin").switchClass("nameFixedMin", "nameFixedMinShown", 1000)
+      $(".nameFixedMin").switchClass("nameFixedMin", "nameFixedMinShown", 2500)
       
       //Section to give some margin for the newly displayed fixed divs
       $("#aboutMe").addClass("aboutMeMargin")
